@@ -1,7 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
-import { getBlogs } from '@/api/blogs';
-import { BlogCard } from '@/components/BlogCard';
-
+import { getBlogs } from '../api/blogs';
+import BlogCard from '../components/BlogCard';
 const BlogList = () => {
   const { data, isLoading, error } = useQuery({
     queryKey: ['blogs'],
@@ -19,3 +18,5 @@ const BlogList = () => {
     </div>
   );
 };
+
+export default BlogList;

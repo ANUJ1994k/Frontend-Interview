@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
-import { createBlog } from '@/api/blogs';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
+import { createBlog } from '../api/blogs';
+import { Button } from '../components/ui/button';
+import { Textarea } from '../components/ui/iextarea';
+import { Input } from '../components/ui/input';
 
 const CreateBlog = () => {
   const [title, setTitle] = useState('');
@@ -36,3 +36,5 @@ const CreateBlog = () => {
     </div>
   );
 };
+
+export default CreateBlog

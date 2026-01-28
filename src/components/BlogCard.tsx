@@ -1,20 +1,11 @@
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Blog } from '@/api/blogs';
-import { Link } from 'react-router-dom';
+import { Card } from "./ui/card";
 
-export const BlogCard = ({ blog }: { blog: Blog }) => (
-  <Card className="hover:shadow-lg transition">
-    <CardHeader>
-      <CardTitle>{blog.title}</CardTitle>
-    </CardHeader>
-    <CardContent>
-      <p className="text-sm text-gray-600 mb-2">By {blog.author}</p>
-      <Link
-        to={`/blogs/${blog.id}`}
-        className="text-blue-600 hover:underline"
-      >
-        Read more →
-      </Link>
-    </CardContent>
+const BlogCard = ({ blog, onClick }: { blog: any; onClick: () => void }) => (
+  <Card className="cursor-pointer p-4" onClick={onClick}>
+    <h3 className="font-bold text-lg">{blog.title}</h3>
+    <p className="text-sm text-gray-500">{blog.category.join(', ')}</p>
+    <p className="mt-2">{blog.description}</p>
   </Card>
 );
+
+export default BlogCard;
