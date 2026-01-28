@@ -5,7 +5,7 @@ import { Button } from '../components/ui/button';
 import { Textarea } from '../components/ui/iextarea';
 import { Input } from '../components/ui/input';
 
-const CreateBlog = () => {
+export const CreateBlog = () => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
   const [content, setContent] = useState('');
